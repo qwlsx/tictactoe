@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ristid ja nullid</title>
+    <link rel="stylesheet" href="tictactoe.css">
+    <style>
+   
+    #field img {
+    max-width: 100%;
+    max-height: 100%;
+}
+ 
+        #field td {
+            width: 150px;
+            height: 150px;
+            border: 2px solid black;
+            text-align: center;
+        }
+        body {
+            font-size: 42px;
+            color: white;
+            text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 75px #ff00ff, 0 0 100px #ff00ff;
+            animation: cosmicGlow 10s infinite alternate;
+        }
+ 
+        @keyframes cosmicGlow {
+            0% {
+                text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 75px #ff00ff, 0 0 100px #ff00ff;
+            }
+            50% {
+                text-shadow: 0 0 15px #fff, 0 0 30px #ff00ff, 0 0 45px #ff00ff, 0 0 60px #ff00ff, 0 0 80px #ff00ff, 0 0 100px #ff00ff, 0 0 150px #ff00ff;
+            }
+            100% {
+                text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 75px #ff00ff, 0 0 100px #ff00ff;
+            }
+        }
+ 
+        button {
+            background-color: cyan;
+            font-size: 28px;
+            color: blue;
+            border: 2px solid black;
+            width: 228px;
+            height: 52px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+ 
+        button:hover {
+            transform: scale(1.2);
+            animation: cosmicGlow 5s infinite;
+        }
+ 
+        @keyframes cosmicGlow {
+            0% {
+                background-color: cyan;
+                color: blue;
+            }
+            33% {
+                background-color: darkblue;
+                color: lightblue;
+            }
+            66% {
+                background-color: purple;
+                color: white;
+            }
+            100% {
+                background-color: cyan;
+                color: blue;
+            }
+        }
+    </style>
+    <br>
+</head>
+<body style="background-color: white;">
+    <h1 id="header" align="center">Ristid ja nullid</h1>
+    <table id="field" align="center">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+    <div align="center">
+        <button id="start-button" onclick="startGame()">Alusta mängu</button>
+    </div>
+    <script src="tictactoe.js"></script>
+</body>
+</html>
